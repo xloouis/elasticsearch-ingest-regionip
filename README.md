@@ -24,6 +24,18 @@ PUT _ingest/pipeline/custom-pipeline-name
   ]
 }
 ```
+
+```
+target_field result example
+
+"regionip": {
+  "countryName": "中国",
+  "ispName": "电信",
+  "cityName": "上海市",
+  "regionName": "上海"
+}
+```
+
 ##### for more usage please refer to official [doc](https://www.elastic.co/guide/en/elasticsearch/reference/6.2/ingest.html)
 
 ## Configuration
