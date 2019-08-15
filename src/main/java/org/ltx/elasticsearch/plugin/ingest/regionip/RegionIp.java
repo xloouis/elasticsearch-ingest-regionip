@@ -3,6 +3,8 @@ package org.ltx.elasticsearch.plugin.ingest.regionip;
 /** @author ltxlouis 8/14/2019 */
 public class RegionIp {
 
+  private String ip;
+
   private String countryName;
 
   private String regionName;
@@ -10,6 +12,14 @@ public class RegionIp {
   private String cityName;
 
   private String ispName;
+
+  public String getIp() {
+    return ip;
+  }
+
+  public void setIp(String ip) {
+    this.ip = ip;
+  }
 
   public String getCountryName() {
     return countryName;
@@ -46,7 +56,10 @@ public class RegionIp {
   @Override
   public String toString() {
     return "RegionIp{"
-        + "countryName='"
+        + "ip='"
+        + ip
+        + '\''
+        + ", countryName='"
         + countryName
         + '\''
         + ", regionName='"

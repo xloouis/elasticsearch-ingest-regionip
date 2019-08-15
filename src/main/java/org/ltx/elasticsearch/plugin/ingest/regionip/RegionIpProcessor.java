@@ -51,11 +51,12 @@ public class RegionIpProcessor extends AbstractProcessor {
 
     RegionIp regionIp = ip2RegionSearcher.searchIp(ip, algorithm);
     if (regionIp != null) {
-      HashMap<String, Object> regionData = new HashMap<>(4);
-      regionData.put("countryName", regionIp.getCountryName());
-      regionData.put("regionName", regionIp.getRegionName());
-      regionData.put("cityName", regionIp.getCityName());
-      regionData.put("ispName", regionIp.getIspName());
+      HashMap<String, Object> regionData = new HashMap<>(8);
+      regionData.put("ip", regionIp.getIp());
+      regionData.put("country_name", regionIp.getCountryName());
+      regionData.put("region_name", regionIp.getRegionName());
+      regionData.put("city_name", regionIp.getCityName());
+      regionData.put("isp_name", regionIp.getIspName());
       ingestDocument.setFieldValue(targetField, regionData);
     }
   }

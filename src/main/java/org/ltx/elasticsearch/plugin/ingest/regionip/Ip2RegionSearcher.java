@@ -113,6 +113,7 @@ public class Ip2RegionSearcher {
         return null;
       }
 
+      regionIp.setIp(ip);
       regionIp.setCountryName(countryName);
       regionIp.setRegionName(regionName);
       regionIp.setCityName(cityName);
