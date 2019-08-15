@@ -18,7 +18,8 @@ PUT _ingest/pipeline/custom-pipeline-name
     {
       "regionip": {
         "field": "field_containing_ip_address",
-        "target_field": "target_field_name"
+        "target_field": "target_field_name",
+        "properties": ["country_name", "region_name", "city_name"]
       }
     }
   ]
@@ -29,9 +30,7 @@ PUT _ingest/pipeline/custom-pipeline-name
 target_field result example
 
 "regionip": {
-  "ip": "127.0.0.1",
   "country_name": "中国",
-  "isp_name": "电信",
   "city_name": "上海市",
   "region_name": "上海"
 }
@@ -47,6 +46,7 @@ target_field result example
 | target_field   | no | Field name to write region info to, defaults to `regionip` |
 | ignore_missing | no | If set to true, doc missing specified field will not throw a exception, defaults to `false`. |
 | ip2region_algorithm | no |`BTREE`/`BINARY`/`MEMORY`, defaults to `MEMORY` [[link]](https://github.com/lionsoul2014/ip2region) |
+| properties | no | `ip`, `country_name`, `region_name`, `city_name`, `isp_name`, default to all properties |
 
 ## Build
 

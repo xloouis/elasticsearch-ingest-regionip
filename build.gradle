@@ -11,7 +11,7 @@ buildscript {
 }
 
 group = 'org.ltx.elasticsearch.plugin'
-version = '1.0'
+version = '1.1'
 
 apply plugin: 'java'
 apply plugin: 'elasticsearch.esplugin'
@@ -32,7 +32,7 @@ esplugin {
     name 'ingest-regionip'
     description 'Ingest processor to add Chinese region info based on provided ip address'
     classname 'org.ltx.elasticsearch.plugin.ingest.regionip.IngestRegionIpPlugin'
-    version '1.0'
+    version '1.1'
 
     licenseFile rootProject.file('LICENSE.txt')
     noticeFile rootProject.file('NOTICE.txt')
