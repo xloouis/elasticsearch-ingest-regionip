@@ -46,7 +46,7 @@ target_field result example
 | target_field   | no | Field name to write region info to, defaults to `regionip` |
 | ignore_missing | no | If set to true, doc missing specified field will not throw a exception, defaults to `false`. |
 | ip2region_algorithm | no |`BTREE`/`BINARY`/`MEMORY`, defaults to `MEMORY` [[link]](https://github.com/lionsoul2014/ip2region) |
-| properties | no | `ip`, `country_name`, `region_name`, `city_name`, `isp_name`, default to all properties |
+| properties | no | `ip`, `country_name`, `region_name`, `city_name`, `isp_name`, defaults to all properties |
 
 ## Build
 
