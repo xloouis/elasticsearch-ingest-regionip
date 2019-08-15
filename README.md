@@ -29,10 +29,11 @@ PUT _ingest/pipeline/custom-pipeline-name
 target_field result example
 
 "regionip": {
-  "countryName": "中国",
-  "ispName": "电信",
-  "cityName": "上海市",
-  "regionName": "上海"
+  "ip": "127.0.0.1",
+  "country_name": "中国",
+  "isp_name": "电信",
+  "city_name": "上海市",
+  "region_name": "上海"
 }
 ```
 
